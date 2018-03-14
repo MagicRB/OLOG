@@ -1,1 +1,0 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/OLOG_DEMO.dir/test/src/main.cpp.o  -o OLOG_DEMO -Wl,-rpath,/home/main/C++/OLOG/cmake-build-debug libOLOG.so 
