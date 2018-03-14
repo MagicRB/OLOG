@@ -1,11 +1,11 @@
 #include "OLOG/OLOG.hpp"
 
-#include <iostream>
-
 int main()
 {
     OLOG::init_log("main", "stdout");
     OLOG::Log* log = OLOG::get_log_by_name("main");
+
+    log->type = OLOG_LOG_FILE;
 
     log->log(OLOG_ERROR, "main.cpp", "Test Error");
     log->log(OLOG_WARNING, "main.cpp", "Test Warning");
