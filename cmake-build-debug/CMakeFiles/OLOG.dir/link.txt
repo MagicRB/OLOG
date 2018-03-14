@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC -g  -shared -Wl,-soname,libOLOG.so -o libOLOG.so CMakeFiles/OLOG.dir/lib/src/Log.cpp.o CMakeFiles/OLOG.dir/lib/src/OLOG.cpp.o 

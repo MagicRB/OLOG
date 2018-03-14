@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/include/OLOG/Log.hpp
+fstream
+-
+
+../lib/include/OLOG/OLOG.hpp
+OLOG/Log.hpp
+../lib/include/OLOG/OLOG/Log.hpp
+
+/home/main/C++/OLOG/lib/src/Log.cpp
+chrono
+-
+iomanip
+-
+iostream
+-
+OLOG/Log.hpp
+/home/main/C++/OLOG/lib/src/OLOG/Log.hpp
+OLOG/OLOG.hpp
+/home/main/C++/OLOG/lib/src/OLOG/OLOG.hpp
+
+/home/main/C++/OLOG/lib/src/OLOG.cpp
+OLOG/OLOG.hpp
+/home/main/C++/OLOG/lib/src/OLOG/OLOG.hpp
+map
+-
+iostream
+-
+

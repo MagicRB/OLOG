@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/include/OLOG/Log.hpp
+fstream
+-
+
+../lib/include/OLOG/OLOG.hpp
+OLOG/Log.hpp
+../lib/include/OLOG/OLOG/Log.hpp
+
+/home/main/C++/OLOG/test/src/main.cpp
+OLOG/OLOG.hpp
+/home/main/C++/OLOG/test/src/OLOG/OLOG.hpp
+iostream
+-
+

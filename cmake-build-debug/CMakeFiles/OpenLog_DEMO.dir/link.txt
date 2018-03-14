@@ -1,0 +1,1 @@
+/usr/bin/g++  -g  -rdynamic CMakeFiles/OpenLog_DEMO.dir/test/src/main.cpp.o  -o OpenLog_DEMO -Wl,-rpath,/home/main/C++/OLOG/cmake-build-debug libOpenLog.so 

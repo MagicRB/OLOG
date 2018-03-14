@@ -1,0 +1,8 @@
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/install/strip.dir
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/install/local.dir
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/OLOG_DEMO.dir
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/list_install_components.dir
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/OLOG.dir
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/main/C++/OLOG/cmake-build-debug/CMakeFiles/install.dir
