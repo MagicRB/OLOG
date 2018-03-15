@@ -7,6 +7,7 @@
 
 #define OLOG_LOG_FILE 0
 #define OLOG_LOG_STDOUT 1
+#define OLOG_LOG_BOTH 2
 
 #include <fstream>
 
@@ -24,7 +25,7 @@ namespace OLOG {
 
         int get_status();
 
-        void log(int message_type, char* issuer, char* text);
+        void log(int message_type, const char* issuer, const char* text);
 
         void close();
 

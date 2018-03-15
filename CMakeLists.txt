@@ -3,7 +3,7 @@ project (OLOG)
 
 file (GLOB LIB_SRC "lib/src/*.cpp" "lib/src/*/*.cpp" "lib/include/OLOG/*.hpp" "lib/include/OLOG/*/*.hpp" "lib/include/OLOG/*.h")
 
-add_library (OLOG SHARED ${LIB_SRC})
+add_library (OLOG SHARED ${LIB_SRC} lib/include/OLOG/Measurement.hpp lib/src/Measurement.cpp)
 
 target_include_directories (OLOG PUBLIC "lib/include")
 

@@ -9,9 +9,9 @@
 #include "OLOG/Log.hpp"
 
 namespace OLOG {
-    Log* init_log(char* name, char* file);
+    Log* init_log(const char* name, const char* file);
 
-    Log* get_log_by_name(char* name);
+    Log* get_log_by_name(const char* name);
 }
 
 #endif // OLOG_HPP
