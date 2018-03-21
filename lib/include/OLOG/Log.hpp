@@ -5,13 +5,27 @@
 #ifndef OLOG_LOG_HPP
 #define OLOG_LOG_HPP
 
-#define OLOG_LOG_FILE 0
-#define OLOG_LOG_STDOUT 1
-#define OLOG_LOG_BOTH 2
-
 #include <fstream>
 
 namespace OLOG {
+
+    enum MessageType {
+
+        error = 0,
+        warning = 1,
+        info = 2,
+        failure = 3
+
+
+    };
+
+    enum LogType {
+
+        file = 0,
+        stdout = 1,
+        both = 2
+
+    };
 
     class Log {
     public:
@@ -20,12 +34,13 @@ namespace OLOG {
 
         std::ofstream* log_file;
         int status = 0;
-        int type = 0;
+        LogType type = file;
+
         long int message_number = 0;
 
         int get_status();
 
-        void log(int message_type, const char* issuer, const char* text);
+        void log(OLOG::MessageType message_type, const char* issuer, const char* text);
 
         void close();
 

@@ -13,28 +13,28 @@ OLOG::Log::Log() = default;
 
 OLOG::Log::~Log() = default;
 
-void OLOG::Log::log(int message_type, const char *issuer, const char *text) {
+void OLOG::Log::log(OLOG::MessageType message_type, const char *issuer, const char *text) {
     auto now = std::chrono::system_clock::now();
     auto now_c = std::chrono::system_clock::to_time_t(now);
 
     char* type_c;
 
     switch(message_type) {
-        case OLOG_ERROR: {
+        case OLOG::MessageType::error: {
             type_c = (char *)"Error";
             break;
         }
-        case OLOG_WARNING: {
+        case OLOG::MessageType::warning: {
             type_c = (char *)"Warning";
             break;
         }
-        case OLOG_INFO: {
+        case OLOG::MessageType::info: {
             type_c = (char *)"Info";
             break;
         }
-        case OLOG_FAILURE: {
+        case OLOG::MessageType::failure: {
             type_c = (char *)"Failure";
-            status = OLOG_FAILURE;
+            status = OLOG::MessageType::failure;
             break;
         }
         default: {
@@ -43,11 +43,11 @@ void OLOG::Log::log(int message_type, const char *issuer, const char *text) {
         }
     }
 
-    if (type == OLOG_LOG_FILE || type == OLOG_LOG_BOTH) {
+    if (type == OLOG::LogType::file || type == OLOG::LogType::both) {
         *log_file << "{" << message_number << "}[" << std::put_time(std::localtime(&now_c), "%T") << "](" << issuer << ") " << type_c << ": " << text << "\n";
         log_file->flush();
     }
-    if (type == OLOG_LOG_STDOUT || type == OLOG_LOG_BOTH) {
+    if (type == OLOG::LogType::stdout || type == OLOG::LogType::both) {
         std::cout << "{" << message_number << "}[" << std::put_time(std::localtime(&now_c), "%T") << "](" << issuer << ") " << type_c << ": " << text << "\n";
     }
 

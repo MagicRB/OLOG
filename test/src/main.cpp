@@ -14,24 +14,24 @@ int main()
 
     OLOG::Measurement measure;
 
-    log->type = OLOG_LOG_BOTH;
+    log->type = OLOG::LogType::both;
 
     measure.start();
 
-    log->log(OLOG_ERROR, "main.cpp", "Test Error");
-    log->log(OLOG_WARNING, "main.cpp", "Test Warning");
-    log->log(OLOG_INFO, "main.cpp", "Test Info");
-    log->log(OLOG_FAILURE, "main.cpp", "Test Failure");
+    log->log(OLOG::MessageType::error, "main.cpp", "Test Error");
+    log->log(OLOG::MessageType::warning, "main.cpp", "Test Warning");
+    log->log(OLOG::MessageType::info, "main.cpp", "Test Info");
+    log->log(OLOG::MessageType::failure, "main.cpp", "Test Failure");
 
     measure.end();
 
-    log->log(OLOG_INFO, "main.cpp", ((std::string)"Logging took " + measure.report_string() + (std::string)" us. ").c_str());
+    log->log(OLOG::MessageType::info, "main.cpp", ((std::string)"Logging took " + measure.report_string() + (std::string)" us. ").c_str());
 
-    log->log(OLOG_INFO, "main.cpp", "If you're seeing this message the test passed successfully, congrats!");
+    log->log(OLOG::MessageType::info, "main.cpp", "If you're seeing this message the test passed successfully, congrats!");
 
     main_measure.end();
 
-    log->log(OLOG_INFO, "main.cpp", ((std::string)"The whole main function took " + main_measure.report_string() + (std::string)" us to run!").c_str());
+    log->log(OLOG::MessageType::info, "main.cpp", ((std::string)"The whole main function took " + main_measure.report_string() + (std::string)" us to run!").c_str());
 
     log->close();
 
